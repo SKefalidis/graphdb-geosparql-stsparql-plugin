@@ -1,0 +1,10 @@
+@base                      <http://data.bigdatagrapes.eu/resource/>.
+@prefix crs-epsg:          <http://www.opengis.net/def/crs/EPSG/0/> .
+@prefix geo:               <http://www.opengis.net/ont/geosparql#>.
+@prefix qb4st:             <http://www.w3.org/ns/qb4st/> .
+<AUA/estate/Fasoulis/Geotrisi> geo:hasGeometry <AUA/estate/Fasoulis/Geotrisi/geo>.
+<AUA/estate/Fasoulis/Geotrisi/geo> a geo:Geometry;
+  qb4st:crs crs-epsg:32634;
+  geo:asWKT """<http://www.opengis.net/def/crs/EPSG/0/32634>
+      POINT(799997.80 4589779.63)
+  """^^geo:wktLiteral.

@@ -1,0 +1,85 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041409>
+        rdfs:label  "Glasgow Anniesland" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041312>
+        rdfs:label  "Glasgow Maryhill and Springburn" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041398>
+        rdfs:label  "Glasgow Provan" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041323>
+        rdfs:label  "Rutherglen" .
+
+<http://beta.data.ordnancesurvey.co.uk/doc/7000000000041543.ttl>
+        a                  foaf:Document ;
+        rdfs:seeAlso       <http://sameas.org/rdf?uri=http://data.ordnancesurvey.co.uk/id/7000000000041543> ;
+        dct:title          "Description of http://data.ordnancesurvey.co.uk/id/7000000000041543" ;
+        foaf:primaryTopic  <http://data.ordnancesurvey.co.uk/id/7000000000041543> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041429>
+        rdfs:label  "Scotland" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041306>
+        rdfs:label  "Glasgow Shettleston" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041543>
+        a           <http://data.ordnancesurvey.co.uk/ontology/admingeo/ScottishParliamentElectoralRegion> ;
+        rdfs:label  "Glasgow" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/constituency>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041355> , <http://data.ordnancesurvey.co.uk/id/7000000000041386> , <http://data.ordnancesurvey.co.uk/id/7000000000041306> , <http://data.ordnancesurvey.co.uk/id/7000000000041409> , <http://data.ordnancesurvey.co.uk/id/7000000000041323> , <http://data.ordnancesurvey.co.uk/id/7000000000041398> , <http://data.ordnancesurvey.co.uk/id/7000000000041312> , <http://data.ordnancesurvey.co.uk/id/7000000000041369> , <http://data.ordnancesurvey.co.uk/id/7000000000041397> ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+                "S17000010" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasAreaCode>
+                "SPE" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasUnitID>
+                "41543" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/inEuropeanRegion>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041429> ;
+        <http://data.ordnancesurvey.co.uk/ontology/geometry/extent>
+                <http://data.ordnancesurvey.co.uk/id/geometry/41543-6> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041323> , <http://data.ordnancesurvey.co.uk/id/7000000000041397> , <http://data.ordnancesurvey.co.uk/id/7000000000041306> , <http://data.ordnancesurvey.co.uk/id/7000000000041386> , <http://data.ordnancesurvey.co.uk/id/7000000000041355> , <http://data.ordnancesurvey.co.uk/id/7000000000041312> , <http://data.ordnancesurvey.co.uk/id/7000000000041398> , <http://data.ordnancesurvey.co.uk/id/7000000000041409> , <http://data.ordnancesurvey.co.uk/id/7000000000041369> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting>
+                260318.3 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing>
+                664693.8 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041546> , <http://data.ordnancesurvey.co.uk/id/7000000000041549> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041429> ;
+        <http://www.georss.org/georss/point>
+                "55.855142 -4.23302" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://statistics.data.gov.uk/id/statistical-geography/S17000010> ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+                55.855142 ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long>
+                -4.23302 ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Glasgow" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041355>
+        rdfs:label  "Glasgow Pollok" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041546>
+        rdfs:label  "Central Scotland" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041397>
+        rdfs:label  "Glasgow Cathcart" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041386>
+        rdfs:label  "Glasgow Kelvin" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041369>
+        rdfs:label  "Glasgow Southside" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041549>
+        rdfs:label  "West Scotland" .
+
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/ScottishParliamentElectoralRegion>
+        rdfs:label  "Scottish Parliament Electoral Region"@en .

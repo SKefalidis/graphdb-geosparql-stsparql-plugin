@@ -1,0 +1,280 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024992>
+        rdfs:label  "Chelsea and Fulham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024936>
+        rdfs:label  "Uxbridge and South Ruislip" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025109>
+        rdfs:label  "Erith and Thamesmead" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025065>
+        rdfs:label  "Lewisham West and Penge" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025037>
+        rdfs:label  "Bermondsey and Old Southwark" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041425>
+        rdfs:label  "Eastern" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025031>
+        rdfs:label  "Dulwich and West Norwood" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025003>
+        rdfs:label  "Hendon" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025072>
+        rdfs:label  "Leyton and Wanstead" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024997>
+        rdfs:label  "Westminster North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025044>
+        rdfs:label  "Hornsey and Wood Green" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025029>
+        rdfs:label  "Carshalton and Wallington" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025110>
+        rdfs:label  "Dagenham and Rainham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024991>
+        rdfs:label  "Battersea" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024963>
+        rdfs:label  "Richmond Park" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025108>
+        rdfs:label  "Bexleyheath and Crayford" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025092>
+        rdfs:label  "Ilford North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025064>
+        rdfs:label  "Lewisham, Deptford" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025036>
+        rdfs:label  "Vauxhall" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024983>
+        rdfs:label  "Kingston and Surbiton" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025030>
+        rdfs:label  "Croydon North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025071>
+        rdfs:label  "Hackney South and Shoreditch" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025043>
+        rdfs:label  "Islington North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024968>
+        rdfs:label  "Harrow East" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025084>
+        rdfs:label  "Bromley and Chislehurst" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025028>
+        rdfs:label  "Croydon South" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024990>
+        rdfs:label  "Putney" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024962>
+        rdfs:label  "Feltham and Heston" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025063>
+        rdfs:label  "Lewisham East" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024988>
+        rdfs:label  "Sutton and Cheam" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024941>
+        rdfs:label  "Ruislip, Northwood and Pinner" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025001>
+        rdfs:label  "Finchley and Golders Green" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025070>
+        rdfs:label  "Bethnal Green and Bow" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024995>
+        rdfs:label  "Hampstead and Kilburn" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025042>
+        rdfs:label  "Hackney North and Stoke Newington" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024967>
+        rdfs:label  "Brent North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024939>
+        rdfs:label  "Harrow West" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025068>
+        rdfs:label  "Poplar and Limehouse" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041428>
+        a           <http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion> ;
+        rdfs:label  "London" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/county>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041441> ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+                "E15000007" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasAreaCode>
+                "EUR" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasUnitID>
+                "41428" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/westminsterConstituency>
+                <http://data.ordnancesurvey.co.uk/id/7000000000025044> , <http://data.ordnancesurvey.co.uk/id/7000000000025003> , <http://data.ordnancesurvey.co.uk/id/7000000000025072> , <http://data.ordnancesurvey.co.uk/id/7000000000025030> , <http://data.ordnancesurvey.co.uk/id/7000000000025029> , <http://data.ordnancesurvey.co.uk/id/7000000000025106> , <http://data.ordnancesurvey.co.uk/id/7000000000025112> , <http://data.ordnancesurvey.co.uk/id/7000000000025075> , <http://data.ordnancesurvey.co.uk/id/7000000000024963> , <http://data.ordnancesurvey.co.uk/id/7000000000024983> , <http://data.ordnancesurvey.co.uk/id/7000000000044153> , <http://data.ordnancesurvey.co.uk/id/7000000000024967> , <http://data.ordnancesurvey.co.uk/id/7000000000025066> , <http://data.ordnancesurvey.co.uk/id/7000000000025111> , <http://data.ordnancesurvey.co.uk/id/7000000000024993> , <http://data.ordnancesurvey.co.uk/id/7000000000025037> , <http://data.ordnancesurvey.co.uk/id/7000000000025065> , <http://data.ordnancesurvey.co.uk/id/7000000000025071> , <http://data.ordnancesurvey.co.uk/id/7000000000025092> , <http://data.ordnancesurvey.co.uk/id/7000000000024991> , <http://data.ordnancesurvey.co.uk/id/7000000000025042> , <http://data.ordnancesurvey.co.uk/id/7000000000025070> , <http://data.ordnancesurvey.co.uk/id/7000000000024990> , <http://data.ordnancesurvey.co.uk/id/7000000000024939> , <http://data.ordnancesurvey.co.uk/id/7000000000024988> , <http://data.ordnancesurvey.co.uk/id/7000000000025034> , <http://data.ordnancesurvey.co.uk/id/7000000000025041> , <http://data.ordnancesurvey.co.uk/id/7000000000024938> , <http://data.ordnancesurvey.co.uk/id/7000000000025086> , <http://data.ordnancesurvey.co.uk/id/7000000000024987> , <http://data.ordnancesurvey.co.uk/id/7000000000024997> , <http://data.ordnancesurvey.co.uk/id/7000000000025028> , <http://data.ordnancesurvey.co.uk/id/7000000000025001> , <http://data.ordnancesurvey.co.uk/id/7000000000024962> , <http://data.ordnancesurvey.co.uk/id/7000000000025046> , <http://data.ordnancesurvey.co.uk/id/7000000000024966> , <http://data.ordnancesurvey.co.uk/id/7000000000025110> , <http://data.ordnancesurvey.co.uk/id/7000000000025073> , <http://data.ordnancesurvey.co.uk/id/7000000000025061> , <http://data.ordnancesurvey.co.uk/id/7000000000025004> , <http://data.ordnancesurvey.co.uk/id/7000000000025045> , <http://data.ordnancesurvey.co.uk/id/7000000000025108> , <http://data.ordnancesurvey.co.uk/id/7000000000025064> , <http://data.ordnancesurvey.co.uk/id/7000000000024965> , <http://data.ordnancesurvey.co.uk/id/7000000000024968> , <http://data.ordnancesurvey.co.uk/id/7000000000025063> , <http://data.ordnancesurvey.co.uk/id/7000000000024995> , <http://data.ordnancesurvey.co.uk/id/7000000000025090> , <http://data.ordnancesurvey.co.uk/id/7000000000025039> , <http://data.ordnancesurvey.co.uk/id/7000000000025067> , <http://data.ordnancesurvey.co.uk/id/7000000000025033> , <http://data.ordnancesurvey.co.uk/id/7000000000025040> , <http://data.ordnancesurvey.co.uk/id/7000000000024941> , <http://data.ordnancesurvey.co.uk/id/7000000000025094> , <http://data.ordnancesurvey.co.uk/id/7000000000024960> , <http://data.ordnancesurvey.co.uk/id/7000000000025109> , <http://data.ordnancesurvey.co.uk/id/7000000000025038> , <http://data.ordnancesurvey.co.uk/id/7000000000024937> , <http://data.ordnancesurvey.co.uk/id/7000000000024986> , <http://data.ordnancesurvey.co.uk/id/7000000000024992> , <http://data.ordnancesurvey.co.uk/id/7000000000025036> , <http://data.ordnancesurvey.co.uk/id/7000000000025084> , <http://data.ordnancesurvey.co.uk/id/7000000000024985> , <http://data.ordnancesurvey.co.uk/id/7000000000024936> , <http://data.ordnancesurvey.co.uk/id/7000000000025043> , <http://data.ordnancesurvey.co.uk/id/7000000000043746> , <http://data.ordnancesurvey.co.uk/id/7000000000025068> , <http://data.ordnancesurvey.co.uk/id/7000000000025113> , <http://data.ordnancesurvey.co.uk/id/7000000000025088> , <http://data.ordnancesurvey.co.uk/id/7000000000025087> , <http://data.ordnancesurvey.co.uk/id/7000000000024999> , <http://data.ordnancesurvey.co.uk/id/7000000000025060> , <http://data.ordnancesurvey.co.uk/id/7000000000025031> ;
+        <http://data.ordnancesurvey.co.uk/ontology/geometry/extent>
+                <http://data.ordnancesurvey.co.uk/id/geometry/41428-1> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains>
+                <http://data.ordnancesurvey.co.uk/id/7000000000025086> , <http://data.ordnancesurvey.co.uk/id/7000000000025039> , <http://data.ordnancesurvey.co.uk/id/7000000000025109> , <http://data.ordnancesurvey.co.uk/id/7000000000025061> , <http://data.ordnancesurvey.co.uk/id/7000000000025070> , <http://data.ordnancesurvey.co.uk/id/7000000000041441> , <http://data.ordnancesurvey.co.uk/id/7000000000025106> , <http://data.ordnancesurvey.co.uk/id/7000000000025094> , <http://data.ordnancesurvey.co.uk/id/7000000000024997> , <http://data.ordnancesurvey.co.uk/id/7000000000024988> , <http://data.ordnancesurvey.co.uk/id/7000000000025028> , <http://data.ordnancesurvey.co.uk/id/7000000000025036> , <http://data.ordnancesurvey.co.uk/id/7000000000025001> , <http://data.ordnancesurvey.co.uk/id/7000000000024965> , <http://data.ordnancesurvey.co.uk/id/7000000000024939> , <http://data.ordnancesurvey.co.uk/id/7000000000025066> , <http://data.ordnancesurvey.co.uk/id/7000000000025075> , <http://data.ordnancesurvey.co.uk/id/7000000000024962> , <http://data.ordnancesurvey.co.uk/id/7000000000024936> , <http://data.ordnancesurvey.co.uk/id/7000000000025044> , <http://data.ordnancesurvey.co.uk/id/7000000000025110> , <http://data.ordnancesurvey.co.uk/id/7000000000024990> , <http://data.ordnancesurvey.co.uk/id/7000000000025063> , <http://data.ordnancesurvey.co.uk/id/7000000000024995> , <http://data.ordnancesurvey.co.uk/id/7000000000025030> , <http://data.ordnancesurvey.co.uk/id/7000000000025041> , <http://data.ordnancesurvey.co.uk/id/7000000000024963> , <http://data.ordnancesurvey.co.uk/id/7000000000024937> , <http://data.ordnancesurvey.co.uk/id/7000000000025087> , <http://data.ordnancesurvey.co.uk/id/7000000000025111> , <http://data.ordnancesurvey.co.uk/id/7000000000024991> , <http://data.ordnancesurvey.co.uk/id/7000000000024983> , <http://data.ordnancesurvey.co.uk/id/7000000000025064> , <http://data.ordnancesurvey.co.uk/id/7000000000024941> , <http://data.ordnancesurvey.co.uk/id/7000000000025084> , <http://data.ordnancesurvey.co.uk/id/7000000000025042> , <http://data.ordnancesurvey.co.uk/id/7000000000025037> , <http://data.ordnancesurvey.co.uk/id/7000000000025071> , <http://data.ordnancesurvey.co.uk/id/7000000000043746> , <http://data.ordnancesurvey.co.uk/id/7000000000025033> , <http://data.ordnancesurvey.co.uk/id/7000000000025029> , <http://data.ordnancesurvey.co.uk/id/7000000000025038> , <http://data.ordnancesurvey.co.uk/id/7000000000025072> , <http://data.ordnancesurvey.co.uk/id/7000000000024966> , <http://data.ordnancesurvey.co.uk/id/7000000000025092> , <http://data.ordnancesurvey.co.uk/id/7000000000024986> , <http://data.ordnancesurvey.co.uk/id/7000000000025067> , <http://data.ordnancesurvey.co.uk/id/7000000000025060> , <http://data.ordnancesurvey.co.uk/id/7000000000024999> , <http://data.ordnancesurvey.co.uk/id/7000000000025034> , <http://data.ordnancesurvey.co.uk/id/7000000000044153> , <http://data.ordnancesurvey.co.uk/id/7000000000025045> , <http://data.ordnancesurvey.co.uk/id/7000000000025004> , <http://data.ordnancesurvey.co.uk/id/7000000000025003> , <http://data.ordnancesurvey.co.uk/id/7000000000024967> , <http://data.ordnancesurvey.co.uk/id/7000000000025073> , <http://data.ordnancesurvey.co.uk/id/7000000000025031> , <http://data.ordnancesurvey.co.uk/id/7000000000024960> , <http://data.ordnancesurvey.co.uk/id/7000000000024987> , <http://data.ordnancesurvey.co.uk/id/7000000000025068> , <http://data.ordnancesurvey.co.uk/id/7000000000025088> , <http://data.ordnancesurvey.co.uk/id/7000000000025090> , <http://data.ordnancesurvey.co.uk/id/7000000000024938> , <http://data.ordnancesurvey.co.uk/id/7000000000024993> , <http://data.ordnancesurvey.co.uk/id/7000000000025046> , <http://data.ordnancesurvey.co.uk/id/7000000000025112> , <http://data.ordnancesurvey.co.uk/id/7000000000024992> , <http://data.ordnancesurvey.co.uk/id/7000000000025065> , <http://data.ordnancesurvey.co.uk/id/7000000000024968> , <http://data.ordnancesurvey.co.uk/id/7000000000025043> , <http://data.ordnancesurvey.co.uk/id/7000000000025113> , <http://data.ordnancesurvey.co.uk/id/7000000000024985> , <http://data.ordnancesurvey.co.uk/id/7000000000025108> , <http://data.ordnancesurvey.co.uk/id/7000000000025040> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting>
+                529613.8 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing>
+                178392.3 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041421> , <http://data.ordnancesurvey.co.uk/id/7000000000041425> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within>
+                <http://data.ordnancesurvey.co.uk/id/country/england> ;
+        <http://www.georss.org/georss/point>
+                "51.489632 -0.134505" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://statistics.data.gov.uk/id/statistical-geography/E15000007> ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+                51.489632 ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long>
+                -0.134505 ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "London" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025106>
+        rdfs:label  "Orpington" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025090>
+        rdfs:label  "East Ham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024987>
+        rdfs:label  "Mitcham and Morden" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025034>
+        rdfs:label  "Tooting" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025075>
+        rdfs:label  "Edmonton" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025088>
+        rdfs:label  "Old Bexley and Sidcup" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025113>
+        rdfs:label  "Romford" .
+
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/EuropeanRegion>
+        rdfs:label  "European Region" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000043746>
+        rdfs:label  "Walthamstow" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025041>
+        rdfs:label  "Tottenham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024966>
+        rdfs:label  "Ealing North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024938>
+        rdfs:label  "Hayes and Harlington" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025067>
+        rdfs:label  "West Ham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025039>
+        rdfs:label  "Holborn and St. Pancras" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024960>
+        rdfs:label  "Brentford and Isleworth" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025061>
+        rdfs:label  "Croydon Central" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024986>
+        rdfs:label  "Wimbledon" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025033>
+        rdfs:label  "Streatham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041421>
+        rdfs:label  "South East" .
+
+<http://beta.data.ordnancesurvey.co.uk/doc/7000000000041428.ttl>
+        a                  foaf:Document ;
+        rdfs:seeAlso       <http://sameas.org/rdf?uri=http://data.ordnancesurvey.co.uk/id/7000000000041428> ;
+        dct:title          "Description of http://data.ordnancesurvey.co.uk/id/7000000000041428" ;
+        foaf:primaryTopic  <http://data.ordnancesurvey.co.uk/id/7000000000041428> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024999>
+        rdfs:label  "Brent Central" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025046>
+        rdfs:label  "Enfield, Southgate" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025087>
+        rdfs:label  "Greenwich and Woolwich" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025112>
+        rdfs:label  "Hornchurch and Upminster" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000044153>
+        rdfs:label  "Kensington" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024993>
+        rdfs:label  "Hammersmith" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025040>
+        rdfs:label  "Cities of London and Westminster" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024965>
+        rdfs:label  "Ealing Central and Acton" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024937>
+        rdfs:label  "Ealing, Southall" .
+
+<http://data.ordnancesurvey.co.uk/id/country/england>
+        rdfs:label  "England"@en .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041441>
+        rdfs:label  "Greater London Authority" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025094>
+        rdfs:label  "Ilford South" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025066>
+        rdfs:label  "Camberwell and Peckham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025038>
+        rdfs:label  "Islington South and Finsbury" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025060>
+        rdfs:label  "Beckenham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000024985>
+        rdfs:label  "Twickenham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025004>
+        rdfs:label  "Chipping Barnet" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025073>
+        rdfs:label  "Chingford and Woodford Green" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025045>
+        rdfs:label  "Enfield North" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025086>
+        rdfs:label  "Eltham" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025111>
+        rdfs:label  "Barking" .

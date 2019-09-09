@@ -1,0 +1,71 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://beta.data.ordnancesurvey.co.uk/doc/7000000000041323.ttl>
+        a                  foaf:Document ;
+        rdfs:seeAlso       <http://sameas.org/rdf?uri=http://data.ordnancesurvey.co.uk/id/7000000000041323> ;
+        dct:title          "Description of http://data.ordnancesurvey.co.uk/id/7000000000041323" ;
+        foaf:primaryTopic  <http://data.ordnancesurvey.co.uk/id/7000000000041323> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041323>
+        a           <http://data.ordnancesurvey.co.uk/ontology/admingeo/ScottishParliamentConstituency> ;
+        rdfs:label  "Rutherglen" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+                "S16000141" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasAreaCode>
+                "SPC" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasUnitID>
+                "41323" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/inEuropeanRegion>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041429> ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/inRegion>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041543> ;
+        <http://data.ordnancesurvey.co.uk/ontology/geometry/extent>
+                <http://data.ordnancesurvey.co.uk/id/geometry/41323-3> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting>
+                265113.8 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing>
+                659880.6 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041397> , <http://data.ordnancesurvey.co.uk/id/7000000000041369> , <http://data.ordnancesurvey.co.uk/id/7000000000041307> , <http://data.ordnancesurvey.co.uk/id/7000000000041306> , <http://data.ordnancesurvey.co.uk/id/7000000000041523> , <http://data.ordnancesurvey.co.uk/id/7000000000041406> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041543> ;
+        <http://www.georss.org/georss/point>
+                "55.813292 -4.154081" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://statistics.data.gov.uk/id/statistical-geography/S16000141> ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+                55.813292 ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long>
+                -4.154081 ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Rutherglen" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041429>
+        rdfs:label  "Scotland" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041306>
+        rdfs:label  "Glasgow Shettleston" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041523>
+        rdfs:label  "Uddingston and Bellshill" .
+
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/ScottishParliamentConstituency>
+        rdfs:label  "Scottish Parliament Constituency"@en .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041543>
+        rdfs:label  "Glasgow" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041307>
+        rdfs:label  "Hamilton, Larkhall and Stonehouse" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041397>
+        rdfs:label  "Glasgow Cathcart" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041406>
+        rdfs:label  "East Kilbride" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041369>
+        rdfs:label  "Glasgow Southside" .

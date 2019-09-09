@@ -1,0 +1,5 @@
+PREFIX : <http://www.ontotext.com/plugins/geosparql#>
+
+INSERT DATA {
+    _:s :forceReindex ""
+}

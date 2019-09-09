@@ -1,0 +1,71 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000041424>
+        rdfs:label  "Wales" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000025484>
+        rdfs:label  "Cardiff" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000019031>
+        rdfs:label  "Whitchurch" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000006104>
+        rdfs:label  "Caerphilly" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000019025>
+        rdfs:label  "Rhiwbina" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000006379>
+        rdfs:label  "Taffs Well" .
+
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/Community>
+        rdfs:label  "Community"@en .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000019028>
+        rdfs:label  "Radyr and Morganstown" .
+
+<http://beta.data.ordnancesurvey.co.uk/doc/7000000000019026.ttl>
+        a                  foaf:Document ;
+        rdfs:seeAlso       <http://sameas.org/rdf?uri=http://data.ordnancesurvey.co.uk/id/7000000000019026> ;
+        dct:title          "Description of http://data.ordnancesurvey.co.uk/id/7000000000019026" ;
+        foaf:primaryTopic  <http://data.ordnancesurvey.co.uk/id/7000000000019026> .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000019026>
+        a           <http://data.ordnancesurvey.co.uk/ontology/admingeo/Community> ;
+        rdfs:label  "Tongwynlais" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode>
+                "W04000864" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasAreaCode>
+                "CPC" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/hasUnitID>
+                "19026" ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/inDistrict>
+                <http://data.ordnancesurvey.co.uk/id/7000000000025484> ;
+        <http://data.ordnancesurvey.co.uk/ontology/admingeo/inEuropeanRegion>
+                <http://data.ordnancesurvey.co.uk/id/7000000000041424> ;
+        <http://data.ordnancesurvey.co.uk/ontology/geometry/extent>
+                <http://data.ordnancesurvey.co.uk/id/geometry/19026-21> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting>
+                313800.3 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing>
+                182963.6 ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches>
+                <http://data.ordnancesurvey.co.uk/id/7000000000019028> , <http://data.ordnancesurvey.co.uk/id/7000000000006099> , <http://data.ordnancesurvey.co.uk/id/7000000000006379> , <http://data.ordnancesurvey.co.uk/id/7000000000006104> , <http://data.ordnancesurvey.co.uk/id/7000000000019025> , <http://data.ordnancesurvey.co.uk/id/7000000000019031> ;
+        <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within>
+                <http://data.ordnancesurvey.co.uk/id/7000000000025484> ;
+        <http://www.georss.org/georss/point>
+                "51.538967 -3.244282" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://statistics.data.gov.uk/id/statistical-geography/W04000864> ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+                51.538967 ;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long>
+                -3.244282 ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Tongwynlais" .
+
+<http://data.ordnancesurvey.co.uk/id/7000000000006099>
+        rdfs:label  "Pentyrch" .

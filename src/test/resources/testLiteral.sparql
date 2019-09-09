@@ -1,0 +1,7 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX my: <http://example.org/ApplicationSchema#>
+
+SELECT ?f
+WHERE {
+	?f geo:sfOverlaps "Polygon((-83.6 34.1, -83.2 34.1, -83.2 34.5, -83.6 34.5, -83.6 34.1))"^^geo:wktLiteral
+}

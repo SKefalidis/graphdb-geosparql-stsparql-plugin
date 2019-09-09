@@ -1,0 +1,8 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX my: <http://example.org/ApplicationSchema#>
+
+SELECT ?f
+WHERE {
+	?f a geo:Feature .
+	?f geo:sfDisjoint my:A
+}

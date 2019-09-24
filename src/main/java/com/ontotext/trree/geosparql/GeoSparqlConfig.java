@@ -29,7 +29,8 @@ public class GeoSparqlConfig {
         }
     }
 
-    private final static String VERSION = "2";
+    private final static String VERSION = "3";
+    private final static String LEGACY_VERSION = "2";
     private final static String PLUGIN_CONFIG_FILENAME = "config.properties";
     private final static String INDEX_DIRECTORY = "index";
     private final static String ENABLED_KEY = "enabled";
@@ -193,6 +194,10 @@ public class GeoSparqlConfig {
     public void updateCurrentSettings() {
         currentPrecision = precision;
         currentPrefixTree = prefixTree;
+    }
+
+    public static Path resolveLegacyConfigPath(Path pluginDataDir) {
+        return pluginDataDir.resolve("v" + GeoSparqlConfig.LEGACY_VERSION).resolve(PLUGIN_CONFIG_FILENAME);
     }
 
     public static Path resolveConfigPath(Path pluginDataDir) {

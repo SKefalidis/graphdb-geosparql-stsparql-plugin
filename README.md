@@ -1,6 +1,7 @@
 # GraphDB GeoSPARQL Plugin
 
-This is the GraphDB GeoSPARQL plugin.
+This is the GraphDB GeoSPARQL plugin. More information about it is available in the GraphDB documentation here:
+http://graphdb.ontotext.com/documentation/enterprise/geosparql-support.html
 
 ## Building the plugin
 

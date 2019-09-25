@@ -61,7 +61,7 @@ public class TestChangeSettings extends AbstractGeoSparqlPluginTest {
     }
 
     private String getSettingFromFile(String settingName) throws IOException {
-        Path settingsFile = Paths.get(((OwlimSchemaRepository)((SailRepository)repository).getSail()).getStorageFolder(), "GeoSPARQL", "v2", "config.properties");
+        Path settingsFile = Paths.get(((OwlimSchemaRepository)((SailRepository)repository).getSail()).getStorageFolder(), "GeoSPARQL", "v3", "config.properties");
         Properties properties = new Properties();
         try (FileReader reader = new FileReader(settingsFile.toFile())) {
             properties.load(reader);
@@ -92,7 +92,7 @@ public class TestChangeSettings extends AbstractGeoSparqlPluginTest {
 	}
 
     private long getIndexSizeOnDisk() throws IOException {
-        Path indexDir = Paths.get(((OwlimSchemaRepository)((SailRepository)repository).getSail()).getStorageFolder(), "GeoSPARQL", "v2", "index");
+        Path indexDir = Paths.get(((OwlimSchemaRepository)((SailRepository)repository).getSail()).getStorageFolder(), "GeoSPARQL", "v3", "index");
         AtomicLong size = new AtomicLong(0);
         if (Files.isDirectory(indexDir)) {
             Files.walkFileTree(indexDir, new SimpleFileVisitor<Path>() {

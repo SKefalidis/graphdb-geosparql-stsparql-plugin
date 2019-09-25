@@ -4,6 +4,7 @@ import com.ontotext.trree.geosparql.GeoSparqlConfig;
 import com.ontotext.trree.sdk.PluginException;
 import org.apache.lucene.spatial.prefix.tree.GeohashPrefixTree;
 import org.apache.lucene.spatial.prefix.tree.QuadPrefixTree;
+import org.slf4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,6 +21,29 @@ import java.util.Properties;
  * @since 01 Oct 2015.
  */
 public class GeoSparqlUtils {
+    public static void migrateConfig(Path pluginDataDir, Logger logger) {
+        GeoSparqlConfig config = new GeoSparqlConfig();
+
+        Path configPath = GeoSparqlConfig.resolveConfigPath(pluginDataDir);
+        if (!Files.exists(configPath)) {
+            Path legacyConfigPath = GeoSparqlConfig.resolveLegacyConfigPath(pluginDataDir);
+            if (Files.isReadable(legacyConfigPath)) {
+                try (FileInputStream in = new FileInputStream(legacyConfigPath.toFile())) {
+                    Properties properties = new Properties();
+                    properties.load(in);
+                    config.setFromProperties(properties);
+                    if (config.isEnabled()) {
+                        logger.info("Detected incompatible index from a previous version. Please rebuild the index manually.");
+                        config.setEnabled(false);
+                    }
+                    saveConfig(config, pluginDataDir);
+                } catch (IOException e) {
+                    throw new PluginException("Cannot load GeoSPARQL configuration file.", e);
+                }
+            }
+        }
+    }
+
     public static GeoSparqlConfig readConfig(Path pluginDataDir) {
         GeoSparqlConfig config = new GeoSparqlConfig();
 

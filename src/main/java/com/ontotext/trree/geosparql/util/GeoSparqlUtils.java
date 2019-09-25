@@ -33,7 +33,7 @@ public class GeoSparqlUtils {
                     properties.load(in);
                     config.setFromProperties(properties);
                     if (config.isEnabled()) {
-                        logger.info("Upgrade detected. Index is created with previous GraphDB version. Recreate index");
+                        logger.info("Detected incompatible index from a previous version. Please rebuild the index manually.");
                         config.setEnabled(false);
                     }
                     saveConfig(config, pluginDataDir);

@@ -6,12 +6,13 @@ import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.query.*;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static junit.framework.TestCase.assertFalse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Tests for status check (SELECT) and command execution (INSERT).
@@ -61,7 +62,6 @@ public class TestPluginControl extends AbstractGeoSparqlPluginTest {
     @Test
     public void testAllStatus() {
         GraphQuery q = connection.prepareGraphQuery(QueryLanguage.SPARQL,
-//                "DESCRIBE ?s");
                 "CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }");
         q.setBinding("s", GeoSparqlPlugin.CONTEXT_IRI);
         Map<Value, Value> result = new HashMap<>();
@@ -72,7 +72,7 @@ public class TestPluginControl extends AbstractGeoSparqlPluginTest {
                 result.put(s.getPredicate(), s.getObject());
             }
         }
-        assertEquals(7, result.size());
+        assertEquals(8, result.size());
         assertEquals(VF.createLiteral(GeoSparqlConfig.ENABLED_DEFAULT), result.get(GeoSparqlPlugin.ENABLED_PREDICATE_IRI));
         assertEquals(GeoSparqlConfig.PREFIXTREE_DEFAULT.toLiteral(), result.get(GeoSparqlPlugin.PREFIXTREE_PREDICATE_IRI));
         assertEquals(VF.createLiteral(GeoSparqlConfig.PRECISION_DEFAULT), result.get(GeoSparqlPlugin.PRECISION_PREDICATE_IRI));
@@ -80,16 +80,52 @@ public class TestPluginControl extends AbstractGeoSparqlPluginTest {
         assertEquals(VF.createLiteral(GeoSparqlConfig.PRECISION_DEFAULT), result.get(GeoSparqlPlugin.CURRENT_PRECISION_PREDICATE_IRI));
         assertEquals(VF.createLiteral(GeoSparqlConfig.MAX_BUFFERED_DOCS_DEFAULT), result.get(GeoSparqlPlugin.MAX_BUFFERED_DOCS_PREDICATE_IRI));
         assertEquals(VF.createLiteral(GeoSparqlConfig.RAM_BUFFER_SIZE_MB_DEFAULT), result.get(GeoSparqlPlugin.RAM_BUFFER_SIZE_MB_PREDICATE_IRI));
+        assertEquals(VF.createLiteral(GeoSparqlConfig.IGNORE_ERRORS_DEFAULT), result.get(GeoSparqlPlugin.IGNORE_ERRORS_PREDICATE_IRI));
     }
 
     @Test
-    public void testAllStatusSelcet() {
+    public void testGetPredicateFromBindSubjectAndObject() {
         TupleQuery q = connection.prepareTupleQuery(QueryLanguage.SPARQL,
-                String.format("SELECT ?pred ?status { <%s> ?pred ?status }",  GeoSparqlPlugin.CONTEXT_IRI));
+                String.format("SELECT ?pred { <%s> ?pred \"quad\" }",  GeoSparqlPlugin.CONTEXT_IRI));
+        List<Value> boundPredicates = new ArrayList<>();
         try (TupleQueryResult r = q.evaluate()) {
-            while (r.hasNext())
-                System.out.println(r.next());
+            while (r.hasNext()) {
+                boundPredicates.add(r.next().getBinding("pred").getValue());
+            }
         }
+
+        // Default config contains two predicates that have value "QUAD"
+        assertEquals(2, boundPredicates.size());
+        assertTrue(boundPredicates.contains(GeoSparqlPlugin.PREFIXTREE_PREDICATE_IRI));
+        assertTrue(boundPredicates.contains(GeoSparqlPlugin.CURRENT_PREFIXTREE_PREDICATE_IRI));
+    }
+
+    @Test
+    public void testListSubjectAndCertainPredicates() {
+        TupleQuery q = connection.prepareTupleQuery(QueryLanguage.SPARQL,
+                "PREFIX : <http://www.ontotext.com/plugins/geosparql#>\n" +
+                        "SELECT * WHERE {\n" +
+                        "    ?s :currentPrefixTree ?tree;\n" +
+                        "       :currentPrecision ?precision;\n" +
+                        "        :ramBufferSizeMB ?ramBufferSizeMB;\n" +
+                        "        :maxBufferedDocs ?maxBufferedDocs.\n" +
+                        "}");
+        List<BindingSet> bindingSetList = new ArrayList<>();
+        try (TupleQueryResult r = q.evaluate()) {
+            while (r.hasNext()) {
+                assertTrue(r.hasNext());
+                bindingSetList.add(r.next());
+            }
+        }
+
+        // Verify that single result is returned, containing all queried elements
+        assertEquals(1, bindingSetList.size());
+
+        assertEquals(GeoSparqlPlugin.CONTEXT_IRI, bindingSetList.get(0).getBinding("s").getValue());
+        assertEquals(GeoSparqlConfig.PREFIXTREE_DEFAULT.toLiteral(), bindingSetList.get(0).getBinding("tree").getValue());
+        assertEquals(VF.createLiteral(GeoSparqlConfig.PRECISION_DEFAULT), bindingSetList.get(0).getBinding("precision").getValue());
+        assertEquals(VF.createLiteral(GeoSparqlConfig.RAM_BUFFER_SIZE_MB_DEFAULT), bindingSetList.get(0).getBinding("ramBufferSizeMB").getValue());
+        assertEquals(VF.createLiteral(GeoSparqlConfig.MAX_BUFFERED_DOCS_DEFAULT), bindingSetList.get(0).getBinding("maxBufferedDocs").getValue());
     }
 
     @Test

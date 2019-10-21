@@ -2,6 +2,9 @@ package com.ontotext.trree.geosparql;
 
 import com.ontotext.trree.sdk.Entities;
 import com.ontotext.trree.sdk.StatementIterator;
+import org.eclipse.rdf4j.model.Value;
+
+import java.util.*;
 
 /**
  * Iterator that provides access to the plugin's status.
@@ -14,20 +17,27 @@ class GeoSparqlConfigIterator extends StatementIterator {
     private int index;
 
     GeoSparqlConfigIterator(GeoSparqlPlugin plugin, long predicate, Entities entities) {
+        this(plugin, predicate, 0, entities);
+    }
+
+    GeoSparqlConfigIterator(GeoSparqlPlugin plugin, long predicate, long object, Entities entities) {
         this.plugin = plugin;
         this.entities = entities;
 
         if (predicate == 0) {
-            predicates = new long[]{plugin.enabledPredicateId, plugin.prefixTreePredicateId,
-                    plugin.precisionPredicateId, plugin.currentPrefixTreePredicateId,
-                    plugin.currentPrecisionPredicateId, plugin.maxBufferedDocsPredicateId,
-                    plugin.ramBufferSizePredicateId};
+            if (object == 0) {
+                predicates = new long[]{plugin.enabledPredicateId, plugin.prefixTreePredicateId,
+                        plugin.precisionPredicateId, plugin.currentPrefixTreePredicateId,
+                        plugin.currentPrecisionPredicateId, plugin.maxBufferedDocsPredicateId,
+                        plugin.ramBufferSizePredicateId, plugin.ignoreErrorsPredicateId};
+            } else {
+                predicates = getPredicateFromObjectValue(entities.get(object));
+            }
         } else {
             predicates = new long[]{predicate};
         }
 
         subject = plugin.contextId;
-        //context = plugin.contextId;
     }
 
     @Override
@@ -56,6 +66,9 @@ class GeoSparqlConfigIterator extends StatementIterator {
             } else if (predicate == plugin.ramBufferSizePredicateId) {
                 object = entities.put(GeoSparqlPlugin.VALUE_FACTORY.createLiteral(plugin.getConfig().getRamBufferSizeMb()),
                         Entities.Scope.REQUEST);
+            } else if (predicate == plugin.ignoreErrorsPredicateId) {
+                object = entities.put(GeoSparqlPlugin.VALUE_FACTORY.createLiteral(plugin.getConfig().isIgnoreErrors()),
+                        Entities.Scope.REQUEST);
             }
 
             index++;
@@ -68,5 +81,30 @@ class GeoSparqlConfigIterator extends StatementIterator {
     @Override
     public void close() {
         // no-op
+    }
+
+    private long[] getPredicateFromObjectValue(Value objectValue) {
+        List<Long> predicatesList = new ArrayList<>();
+        for (Map.Entry<Object, Object> propertiesValues : plugin.getConfig().getAsProperties().entrySet()) {
+            if (objectValue.stringValue().equalsIgnoreCase(propertiesValues.getValue().toString())) {
+                predicatesList.add(getPluginPredicateFromConfigKey(propertiesValues.getKey().toString()));
+            }
+        }
+
+        return predicatesList.stream().mapToLong(i->i).toArray();
+    }
+
+    private long getPluginPredicateFromConfigKey(String propertyKey) {
+        Map<String, Long> mappedPropertiesKeyToPluginPredicates = new HashMap<>();
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.ENABLED_KEY, plugin.enabledPredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.CURRENT_PREFIXTREE_KEY, plugin.currentPrefixTreePredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.CURRENT_PRECISION, plugin.currentPrecisionPredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.PREFIXTREE_KEY, plugin.prefixTreePredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.PRECISION_KEY, plugin.precisionPredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.MAX_BUFFERED_DOCS_KEY, plugin.maxBufferedDocsPredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.RAM_BUFFER_SIZE_MB_KEY, plugin.ramBufferSizePredicateId);
+        mappedPropertiesKeyToPluginPredicates.put(GeoSparqlConfig.IGNORE_ERRORS_KEY, plugin.ignoreErrorsPredicateId);
+
+        return mappedPropertiesKeyToPluginPredicates.get(propertyKey);
     }
 }

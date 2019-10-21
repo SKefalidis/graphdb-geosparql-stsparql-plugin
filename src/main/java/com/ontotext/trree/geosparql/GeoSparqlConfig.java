@@ -33,16 +33,16 @@ public class GeoSparqlConfig {
     private final static String LEGACY_VERSION = "2";
     private final static String PLUGIN_CONFIG_FILENAME = "config.properties";
     private final static String INDEX_DIRECTORY = "index";
-    private final static String ENABLED_KEY = "enabled";
-    private final static String CURRENT_PREFIXTREE_KEY = "prefixtree.current";
-    private final static String CURRENT_PRECISION = "precision.current";
-    private final static String PREFIXTREE_KEY = "prefixtree";
-    private final static String PRECISION_KEY = "precision";
-    private final static String IGNORE_ERRORS_KEY = "ignoreErrors";
+    final static String ENABLED_KEY = "enabled";
+    final static String CURRENT_PREFIXTREE_KEY = "prefixtree.current";
+    final static String CURRENT_PRECISION = "precision.current";
+    final static String PREFIXTREE_KEY = "prefixtree";
+    final static String PRECISION_KEY = "precision";
+    final static String IGNORE_ERRORS_KEY = "ignoreErrors";
 
     // Both fields are used for tuning Lucene IndexWriter
-    private final static String MAX_BUFFERED_DOCS_KEY = "maxBufferedDocs";
-    private final static String RAM_BUFFER_SIZE_MB_KEY = "ramBufferSizeMB";
+    final static String MAX_BUFFERED_DOCS_KEY = "maxBufferedDocs";
+    final static String RAM_BUFFER_SIZE_MB_KEY = "ramBufferSizeMB";
 
     final static boolean ENABLED_DEFAULT = false;
     final static PrefixTree PREFIXTREE_DEFAULT = PrefixTree.QUAD;

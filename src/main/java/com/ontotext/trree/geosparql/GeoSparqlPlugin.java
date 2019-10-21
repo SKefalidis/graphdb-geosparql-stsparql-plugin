@@ -113,7 +113,7 @@ public class GeoSparqlPlugin extends PluginBase implements PatternInterpreter, U
 	public StatementIterator interpret(long subject, long predicate, long object, long context,
                                        PluginConnection pluginConnection, RequestContext requestContext) {
         if (subject == contextId) {
-            return new GeoSparqlConfigIterator(this, 0, pluginConnection.getEntities());
+            return new GeoSparqlConfigIterator(this, predicate, object, pluginConnection.getEntities());
         } else if (predicate == enabledPredicateId || predicate == prefixTreePredicateId
                 || predicate == precisionPredicateId || predicate == currentPrefixTreePredicateId
                 || predicate == currentPrecisionPredicateId || predicate == maxBufferedDocsPredicateId

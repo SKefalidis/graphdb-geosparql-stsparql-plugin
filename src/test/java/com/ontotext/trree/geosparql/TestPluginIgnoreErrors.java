@@ -16,7 +16,7 @@ public class TestPluginIgnoreErrors extends AbstractGeoSparqlPluginTest {
 		importData("geosparql-broken.rdf", RDFFormat.RDFXML);
 	}
 
-	@Test (expected = UpdateExecutionException.class)
+	@Test (expected = RepositoryException.class)
 	public void indexBuildFailsByDefaultOnWrongData() {
 		enablePlugin();
 	}

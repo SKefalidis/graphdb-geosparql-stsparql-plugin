@@ -7,7 +7,7 @@
 	<version>3.0-SNAPSHOT</version>
 
 	<properties>
-		<graphdb.version>9.2.0-TR12</graphdb.version>
+		<graphdb.version>10.0.0-RDF4J4-BOOTSTRAP1</graphdb.version>
         <gt.version>21.2</gt.version>
 		<lucene.version>8.2.0</lucene.version>
 		<dependency.check.version>6.2.2</dependency.check.version>
@@ -216,7 +216,7 @@
 
 		<dependency>
 			<groupId>com.ontotext.graphdb</groupId>
-			<artifactId>graphdb-free-runtime</artifactId>
+			<artifactId>graphdb-runtime</artifactId>
 			<version>${graphdb.version}</version>
 			<scope>test</scope>
 		</dependency>

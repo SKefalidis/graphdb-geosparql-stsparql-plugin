@@ -4,7 +4,7 @@ import com.ontotext.graphdb.GraphDBRepositoryManager;
 import com.ontotext.test.RepositorySetup;
 import com.ontotext.test.TemporaryRepositoryManager;
 import com.ontotext.test.utils.OwlimSeRepositoryDescription;
-import org.eclipse.rdf4j.OpenRDFException;
+import org.eclipse.rdf4j.common.exception.RDF4JException;
 import org.eclipse.rdf4j.common.io.FileUtil;
 import org.eclipse.rdf4j.common.io.IOUtil;
 import org.eclipse.rdf4j.model.IRI;
@@ -27,8 +27,6 @@ import org.junit.Rule;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,7 +68,7 @@ public abstract class AbstractGeoSparqlPluginTest {
 	protected void restartRepository() throws RepositoryException {
 		connection.close();
 		repository.shutDown();
-		repository.initialize();
+		repository.init();
 		connection = repository.getConnection();
 	}
 
@@ -79,7 +77,7 @@ public abstract class AbstractGeoSparqlPluginTest {
 		repository.shutDown();
         System.out.println(repository.getDataDir());
         FileUtil.deleteDir(getGeoSparqlStorageDir());
-		repository.initialize();
+		repository.init();
 		connection = repository.getConnection();
 	}
 
@@ -97,7 +95,7 @@ public abstract class AbstractGeoSparqlPluginTest {
 		return result;
 	}
 
-	protected void executeSparqlUpdateQuery(String query) throws OpenRDFException {
+	protected void executeSparqlUpdateQuery(String query) throws RDF4JException {
         Update uq = connection.prepareUpdate(QueryLanguage.SPARQL, query);
         uq.execute();
         connection.commit();

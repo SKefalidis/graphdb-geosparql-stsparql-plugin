@@ -1,7 +1,9 @@
 package com.ontotext.trree.geosparql;
 
+import com.ontotext.graphdb.Config;
 import com.ontotext.graphdb.GraphDBRepositoryManager;
 import com.ontotext.test.RepositorySetup;
+import com.ontotext.test.TemporaryLocalFolder;
 import com.ontotext.test.TemporaryRepositoryManager;
 import com.ontotext.test.utils.OwlimSeRepositoryDescription;
 import org.eclipse.rdf4j.common.exception.RDF4JException;
@@ -22,8 +24,7 @@ import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.config.RepositoryConfig;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFParseException;
-import org.junit.After;
-import org.junit.Rule;
+import org.junit.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,6 +41,9 @@ public abstract class AbstractGeoSparqlPluginTest {
 	}
 
 	protected static final ValueFactory VF = SimpleValueFactory.getInstance();
+
+	@ClassRule
+	public static TemporaryLocalFolder tmpFolder = new TemporaryLocalFolder();
 
 	@Rule
 	public TemporaryRepositoryManager tmpManager = new TemporaryRepositoryManager(new RepositorySetup() {
@@ -59,6 +63,17 @@ public abstract class AbstractGeoSparqlPluginTest {
 
 	protected Repository repository;
 	protected RepositoryConnection connection;
+
+	@BeforeClass
+	public static void setWorkDir() {
+		System.setProperty("graphdb.home.work", String.valueOf(tmpFolder.getRoot()));
+		Config.reset();
+	}
+	@AfterClass
+	public static void resetWorkDir() {
+		System.clearProperty("graphdb.home.work");
+		Config.reset();
+	}
 
 	@After
 	public void closeConn() throws RepositoryException {

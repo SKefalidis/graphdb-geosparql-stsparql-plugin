@@ -1,5 +1,7 @@
 package com.ontotext.trree.geosparql;
 
+import com.ontotext.graphdb.Config;
+import com.ontotext.test.TemporaryLocalFolder;
 import com.ontotext.test.functional.base.SingleRepositoryFunctionalTest;
 import com.ontotext.test.utils.StandardUtils;
 import com.useekm.geosparql.*;
@@ -18,9 +20,7 @@ import org.eclipse.rdf4j.query.algebra.evaluation.function.FunctionRegistry;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.config.RepositoryConfig;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -28,11 +28,25 @@ import static org.junit.Assert.*;
  * Created by avataar on 06.04.2015..
  */
 public class TestGeosparql extends SingleRepositoryFunctionalTest {
+	@ClassRule
+	public static TemporaryLocalFolder tmpFolder = new TemporaryLocalFolder();
+
 	private RepositoryConnection connection;
 
 	@Override
 	protected RepositoryConfig createRepositoryConfiguration() {
 		return StandardUtils.createOwlimSe("empty");
+	}
+
+	@BeforeClass
+	public static void setWorkDir() {
+		System.setProperty("graphdb.home.work", String.valueOf(tmpFolder.getRoot()));
+		Config.reset();
+	}
+	@AfterClass
+	public static void resetWorkDir() {
+		System.clearProperty("graphdb.home.work");
+		Config.reset();
 	}
 
 	@Before

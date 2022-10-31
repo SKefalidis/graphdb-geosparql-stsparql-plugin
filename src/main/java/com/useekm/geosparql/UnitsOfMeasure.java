@@ -13,11 +13,11 @@
  */
 package com.useekm.geosparql;
 
+import javax.measure.MetricPrefix;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import si.uom.SI;
-import tec.uom.se.unit.MetricPrefix;
 
 import javax.measure.quantity.Length;
 import javax.measure.Unit;

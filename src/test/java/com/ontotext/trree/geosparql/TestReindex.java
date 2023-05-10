@@ -22,7 +22,8 @@ public class TestReindex extends AbstractGeoSparqlPluginTest {
 
     private static final Pattern LUCENE_INDEX_FILES_PATTERN = Pattern.compile(
             "(segments(\\_\\d+|\\.gen)|.*?\\.cfe|.*?\\.cfs|write\\.lock|.*?\\.si|.*?\\.fnm|.*?\\.dim|.*?\\.dvm" +
-                    "|.*?\\.fdt|.*?\\.dvd|.*?\\.tip|.*?\\.fdx|.*?\\.dii|.*?\\.doc|.*?\\.tim)$");
+                    "|.*?\\.fdt|.*?\\.dvd|.*?\\.tip|.*?\\.fdx|.*?\\.dii|.*?\\.doc|.*?\\.tim|.*?\\.fdm|.*?\\.tmd" +
+                    "|.*?\\.kdd|.*?\\.kdm|.*?\\.kdi)$");
 
     @Before
     public void setupConn() throws Exception {

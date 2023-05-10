@@ -7,10 +7,10 @@
 	<version>3.0-SNAPSHOT</version>
 
 	<properties>
-		<graphdb.version>10.1.0-RC3</graphdb.version>
-        <gt.version>27.2</gt.version>
-		<lucene.version>8.2.0</lucene.version>
-		<dependency.check.version>6.2.2</dependency.check.version>
+		<graphdb.version>10.2.1</graphdb.version>
+        <gt.version>27.4</gt.version>
+		<lucene.version>8.10.1</lucene.version>
+		<dependency.check.version>8.2.1</dependency.check.version>
 
 		<internal.repo>https://maven.ontotext.com/content/repositories/owlim-releases</internal.repo>
 		<snapshots.repo>https://maven.ontotext.com/content/repositories/owlim-snapshots</snapshots.repo>
@@ -129,7 +129,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.3.2</version>
+			<version>3.12.0</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -149,12 +149,6 @@
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-backward-codecs</artifactId>
-			<version>${lucene.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-spatial</artifactId>
 			<version>${lucene.version}</version>
 		</dependency>
 

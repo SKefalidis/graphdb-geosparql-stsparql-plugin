@@ -17,6 +17,8 @@ public class CRSUtil {
 	private static final String EPSG_PREFIX = "http://www.opengis.net/def/crs/EPSG/0/";
 	private static final String CRS84 = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";
 
+	// Explicit instantiation of the class using the plugin's class loader.
+	// Ensures consistent loading and eliminates conflicts or inconsistencies caused by different class loaders.
 	static {
 		Calculus.setCurrentNumberSystem(new DefaultNumberSystem());
 	}

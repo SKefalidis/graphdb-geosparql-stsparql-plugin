@@ -7,7 +7,7 @@
 	<version>3.0-SNAPSHOT</version>
 
 	<properties>
-		<graphdb.version>10.2.1</graphdb.version>
+		<graphdb.version>10.3.0</graphdb.version>
         <gt.version>27.5</gt.version>
 		<lucene.version>8.10.1</lucene.version>
 		<dependency.check.version>8.2.1</dependency.check.version>
@@ -222,7 +222,7 @@
 			<groupId>com.ontotext.graphdb</groupId>
 			<artifactId>graphdb-runtime</artifactId>
 			<version>${graphdb.version}</version>
-			<scope>test</scope>
+			<scope>provided</scope>
 			<exclusions>
 				<!-- These are from the FTS functionality and should not be included as they break the plugins -->
 				<exclusion>

@@ -49,6 +49,7 @@ public interface GeoConstants {
     IRI ST_RDF_BELOW = SimpleValueFactory.getInstance().createIRI(STRDF + "below");
     IRI ST_RDF_RIGHT = SimpleValueFactory.getInstance().createIRI(STRDF + "right");
     IRI ST_RDF_LEFT = SimpleValueFactory.getInstance().createIRI(STRDF + "left");
+    IRI ST_RDF_AREA = SimpleValueFactory.getInstance().createIRI(STRDF + "area");
 
     IRI GEO_EH_EQUALS = SimpleValueFactory.getInstance().createIRI(NS_GEO + "ehEquals");
     IRI GEO_EH_DISJOINT = SimpleValueFactory.getInstance().createIRI(NS_GEO + "ehDisjoint");

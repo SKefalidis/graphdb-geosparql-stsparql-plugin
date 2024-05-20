@@ -20,6 +20,7 @@ public interface GeoConstants {
     String NS_GEO = "http://www.opengis.net/ont/geosparql#";
     String NS_GEOF = "http://www.opengis.net/def/function/geosparql/";
     String NS_EXT = "http://rdf.useekm.com/ext#";
+    String STRDF = "http://strdf.di.uoa.gr/ontology#";
 
     IRI XMLSCHEMA_SPATIAL_TEXT = SimpleValueFactory.getInstance().createIRI("http://rdf.opensahara.com/type/geo/wkt");
     IRI XMLSCHEMA_SPATIAL_TEXTGZ = SimpleValueFactory.getInstance().createIRI("http://rdf.opensahara.com/type/geo/wkt.gz");
@@ -43,6 +44,11 @@ public interface GeoConstants {
     IRI GEO_SF_WITHIN = SimpleValueFactory.getInstance().createIRI(NS_GEO + "sfWithin");
     IRI GEO_SF_CONTAINS = SimpleValueFactory.getInstance().createIRI(NS_GEO + "sfContains");
     IRI GEO_SF_OVERLAPS = SimpleValueFactory.getInstance().createIRI(NS_GEO + "sfOverlaps");
+
+    IRI ST_RDF_ABOVE = SimpleValueFactory.getInstance().createIRI(STRDF + "above");
+    IRI ST_RDF_BELOW = SimpleValueFactory.getInstance().createIRI(STRDF + "below");
+    IRI ST_RDF_RIGHT = SimpleValueFactory.getInstance().createIRI(STRDF + "right");
+    IRI ST_RDF_LEFT = SimpleValueFactory.getInstance().createIRI(STRDF + "left");
 
     IRI GEO_EH_EQUALS = SimpleValueFactory.getInstance().createIRI(NS_GEO + "ehEquals");
     IRI GEO_EH_DISJOINT = SimpleValueFactory.getInstance().createIRI(NS_GEO + "ehDisjoint");

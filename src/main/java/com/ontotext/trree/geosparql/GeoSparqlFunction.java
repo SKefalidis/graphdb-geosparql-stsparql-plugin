@@ -1,6 +1,7 @@
 package com.ontotext.trree.geosparql;
 
 import com.useekm.geosparql.*;
+
 import org.apache.lucene.spatial.query.SpatialOperation;
 import org.eclipse.rdf4j.model.IRI;
 import org.locationtech.jts.geom.Geometry;
@@ -64,6 +65,11 @@ public enum GeoSparqlFunction {
     //              0******** (for L/L)
 	SF_CROSSES(Crosses.class, GEO_SF_CROSSES, SpatialOperation.Intersects),
 
+
+	STRDF_ABOVE(Above.class, ST_RDF_ABOVE, SpatialOperation.IsDisjointTo),
+    STRDF_BELOW(Below.class, ST_RDF_BELOW, SpatialOperation.IsDisjointTo),
+    STRDF_RIGHT(Below.class, ST_RDF_RIGHT, SpatialOperation.IsDisjointTo),
+    STRDF_LEFT(Below.class, ST_RDF_LEFT, SpatialOperation.IsDisjointTo),
 
     //////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Egenhofer Topological Relations /////////////////////////

@@ -48,3 +48,7 @@ com.useekm.geosparql.SymDifference
 com.useekm.geosparql.Touches
 com.useekm.geosparql.Union
 com.useekm.geosparql.Within
+com.useekm.geosparql.Above
+com.useekm.geosparql.Below
+com.useekm.geosparql.Right
+com.useekm.geosparql.Left

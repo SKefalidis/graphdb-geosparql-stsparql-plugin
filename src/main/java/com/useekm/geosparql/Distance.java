@@ -60,7 +60,7 @@ public class Distance extends AbstractLiteralBinaryFunction {
         if (unit == null)
             throw new ValueExprEvaluationException("Not a valid length measure unit: " + unitOfMeasure);
 
-        Coordinate[] points = DistanceOp.nearestPoints(geom1, geom2);
+        Coordinate[] points = DistanceOp.nearestPoints(geom1.getCentroid(), geom2.getCentroid());
         //TODO: pick up the correct CRS for use in gc, and for each DirectPosition
         GeodeticCalculator gc = new GeodeticCalculator();
         try {

@@ -27,8 +27,20 @@ public class Below extends AbstractBooleanBinaryFunction {
      * @return a boolean Literal that is true if the minumum bounding box of geom1 is strictly below the minimum bounding box of geom2.
      */
     @Override protected boolean accept(ValueFactory valueFactory, Geometry geom1, Geometry geom2, Value... originals) {
-        var maxY1 = geom1.getEnvelope().getCoordinates()[1].y;
-        var minY2 = geom2.getEnvelope().getCoordinates()[0].y;
+        double maxY1 = 0.0;
+        if (geom1.getCoordinates().length == 1){
+            maxY1 = geom1.getCoordinates()[0].y;
+        } else {
+            maxY1 = geom1.getEnvelope().getCoordinates()[2].y;
+        }
+
+        double minY2 = 0.0;
+        if (geom2.getCoordinates().length == 1){
+            minY2 = geom2.getCoordinates()[0].y;
+        } else {
+            minY2 = geom2.getEnvelope().getCoordinates()[0].y;
+        }
+
         return maxY1 < minY2;
     }
 }

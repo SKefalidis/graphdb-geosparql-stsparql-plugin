@@ -27,8 +27,20 @@ public class Left extends AbstractBooleanBinaryFunction {
      * @return a boolean Literal that is true if the minumum bounding box of geom1 is strictly on the left of the minimum bounding box of geom2.
      */
     @Override protected boolean accept(ValueFactory valueFactory, Geometry geom1, Geometry geom2, Value... originals) {
-        var maxX1 = geom1.getEnvelope().getCoordinates()[2].x;
-        var minX2 = geom2.getEnvelope().getCoordinates()[0].x;
-        return minX2 > maxX1;
+        double maxX1 = 0.0;
+        if (geom1.getCoordinates().length == 1){
+            maxX1 = geom1.getCoordinates()[0].x;
+        } else {
+            maxX1 = geom1.getEnvelope().getCoordinates()[1].x;
+        }
+        
+        double minX2 = 0.0;
+        if (geom2.getCoordinates().length == 1){
+            minX2 = geom2.getCoordinates()[0].x;
+        } else {
+            minX2 = geom2.getEnvelope().getCoordinates()[0].x;
+        }
+
+        return maxX1 < minX2;
     }
 }

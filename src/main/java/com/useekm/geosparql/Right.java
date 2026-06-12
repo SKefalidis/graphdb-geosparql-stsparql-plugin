@@ -27,8 +27,20 @@ public class Right extends AbstractBooleanBinaryFunction {
      * @return a boolean Literal that is true if the minumum bounding box of geom1 is strictly on the right of the minimum bounding box of geom2.
      */
     @Override protected boolean accept(ValueFactory valueFactory, Geometry geom1, Geometry geom2, Value... originals) {
-        var minX1 = geom1.getEnvelope().getCoordinates()[0].x;
-        var maxX2 = geom2.getEnvelope().getCoordinates()[2].x;
+        double minX1 = 0.0;
+        if (geom1.getCoordinates().length == 1){
+            minX1 = geom1.getCoordinates()[0].x;
+        } else {
+            minX1 = geom1.getEnvelope().getCoordinates()[0].x;
+        }
+
+        double maxX2 = 0.0;
+        if (geom2.getCoordinates().length == 1){
+            maxX2 = geom2.getCoordinates()[0].x;
+        } else {
+            maxX2 = geom2.getEnvelope().getCoordinates()[1].x;
+        }
+
         return minX1 > maxX2;
     }
 }
